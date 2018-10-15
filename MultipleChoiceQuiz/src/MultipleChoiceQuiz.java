@@ -287,9 +287,7 @@ public class MultipleChoiceQuiz extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(11, 11, 11)
-                                .addComponent(questionLbl1)
-                                .addGap(52, 52, 52)
-                                .addGap(20, 20, 20))
+                                .addComponent(questionLbl1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
                                 .addComponent(answerPromptLbl1)
@@ -338,46 +336,43 @@ public class MultipleChoiceQuiz extends javax.swing.JFrame {
                                         .addComponent(ansCLbl3)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(ansDLbl3)
-                                .addGap(12, 12, 12)
-                                .addGap(34, 34, 34))
+                                .addGap(46, 46, 46))
                             .addComponent(questionLbl3, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(112, 112, 112)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(199, 199, 199)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(199, 199, 199)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(ansALbl4)
+                                        .addGap(52, 52, 52)
+                                        .addComponent(ansBLbl4)
+                                        .addGap(44, 44, 44)
+                                        .addComponent(ansCLbl4))
+                                    .addComponent(answerPromptLbl4))
+                                .addGap(32, 32, 32)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(ansALbl4)
-                                                .addGap(52, 52, 52)
-                                                .addComponent(ansBLbl4)
-                                                .addGap(44, 44, 44)
-                                                .addComponent(ansCLbl4))
-                                            .addComponent(answerPromptLbl4))
-                                        .addGap(32, 32, 32)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(userAnswer4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ansDLbl4)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(16, 16, 16)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(questionLbl4)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(371, 371, 371)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(numCorrectLbl)
-                            .addComponent(perCorrectLbl)
-                            .addComponent(numIncorrectLbl))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numCorrectNum)
-                            .addComponent(perCorrectNum)
-                            .addComponent(numIncorrectNum, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(userAnswer4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ansDLbl4)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(numCorrectLbl)
+                                    .addComponent(numIncorrectLbl)
+                                    .addComponent(perCorrectLbl))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(numCorrectNum)
+                                    .addComponent(perCorrectNum)
+                                    .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addComponent(questionLbl4))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -451,18 +446,19 @@ public class MultipleChoiceQuiz extends javax.swing.JFrame {
                     .addComponent(answerPromptLbl4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numCorrectLbl)
-                    .addComponent(numIncorrectNum))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numIncorrectLbl)
+                    .addComponent(numCorrectLbl)
                     .addComponent(numCorrectNum))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(perCorrectNum)
-                    .addComponent(perCorrectLbl)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numIncorrectLbl)
+                    .addComponent(numIncorrectNum))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(perCorrectLbl)
+                    .addComponent(perCorrectNum))
+                .addGap(85, 85, 85))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -478,7 +474,7 @@ public class MultipleChoiceQuiz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -505,19 +501,91 @@ public class MultipleChoiceQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_userAnswer4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double answer0, answer1, answer2, answer3, answer4, correctScore, incorrectScore, correctPercentage;
+        String answer0, answer1, answer2, answer3, answer4, correctPercentage;
+         double correctScore = 0;
+         double perCorrect;
+         double incorrectScore = 0;
+         
         
-                answer0 = (Double.parseDouble(userAnswer0.getText()));
-                answer1 = (Double.parseDouble(userAnswer1.getText()));
-                answer2 = (Double.parseDouble(userAnswer2.getText()));
-                answer3 = (Double.parseDouble(userAnswer3.getText()));
-                answer4 = (Double.parseDouble(userAnswer4.getText()));
+        
+                answer0 =userAnswer0.getText();
+                answer1 =userAnswer1.getText();
+                answer2 =userAnswer2.getText();
+                answer3 =userAnswer3.getText();
+                answer4 =userAnswer4.getText();
+               
                 
-                if (answer0.equals "C")
+                if (answer0.equals ("C"))
                 {
-                outputMessegeLbl.setText ("you like weird sizes!");
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                } else if (answer0.equals ("c"))
+                {
+                    answerPromptLbl0.setText ("Correct");
+                    correctScore ++;
+                } else {
+                    answerPromptLbl0.setText ("Incorrect");
+                    incorrectScore ++;
                 }
-   
+                
+                 if (answer1.equals ("A"))
+                {
+                answerPromptLbl1.setText ("Correct");
+                correctScore ++;
+                } else if (answer1.equals ("a"))
+                {
+                    answerPromptLbl1.setText ("Correct");
+                    correctScore ++;
+                } else {
+                    answerPromptLbl1.setText ("Incorrect");
+                    incorrectScore ++;
+                }
+                 
+                  if (answer2.equals ("B"))
+                {
+                answerPromptLbl2.setText ("Correct");
+                correctScore ++;
+                } else if (answer2.equals ("b"))
+                {
+                    answerPromptLbl2.setText ("Correct");
+                    correctScore ++;
+                } else {
+                    answerPromptLbl2.setText ("Incorrect");
+                    incorrectScore ++;
+                }
+                  
+                 if (answer3.equals ("D"))
+                {
+                answerPromptLbl3.setText ("Correct");
+                correctScore ++;
+                } else if (answer3.equals ("d"))
+                {
+                    answerPromptLbl3.setText ("Correct");
+                    correctScore ++;
+                } else {
+                    answerPromptLbl3.setText ("Incorrect");
+                    incorrectScore ++;
+                }
+                 
+                  if (answer4.equals ("B"))
+                {
+                answerPromptLbl4.setText ("Correct");
+                correctScore ++;
+                } else if (answer4.equals ("b"))
+                {
+                    answerPromptLbl4.setText ("Correct");
+                    correctScore ++;
+                } else {
+                    answerPromptLbl4.setText ("Inorrect");
+                    incorrectScore ++;
+                }
+                
+                  
+                  numCorrectNum.setText (""+correctScore);
+                  numIncorrectNum.setText (""+incorrectScore);
+                  perCorrect = ((correctScore /5)*100 ); 
+                  perCorrectNum.setText ("%" + perCorrect); 
+                
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
