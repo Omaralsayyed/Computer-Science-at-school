@@ -41,7 +41,7 @@ public class CoolCounting {
                 System.out.println(i);
             }
         }
-        if (choice==2)
+        else if (choice==2)
         {
             System.out.println("You have chosen to count from 100 to 0 by 10:");
             for (int i = 100; i>=0; i=i - 10)
@@ -49,7 +49,7 @@ public class CoolCounting {
                 System.out.println(i);
             }
         }
-        if (choice==3)
+        else if (choice==3)
         {
             System.out.println("You have chosen to count from 50 to 500 by 50:");
             for (int i = 50; i<=500; i=i + 50)
@@ -57,7 +57,7 @@ public class CoolCounting {
                 System.out.println(i);
             }
         }
-        if (choice==4)
+        else if (choice==4)
         {
             System.out.println("You have chosen to count from 6000 to 1000 by 1000:");
             for (int i = 6000; i>=1000; i=i - 1000)
