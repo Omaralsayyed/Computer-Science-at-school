@@ -24,17 +24,17 @@ public class CubesSquaresAndPowers {
         int choice = 0;
         int newNum = 0;
         
-        choice = keyedInput.nextInt();
-        while (choice != 4)
-        {   
+ 
+         
             System.out.println("Please choose an option:");
             System.out.println("1) Find the value of a number squared" );
             System.out.println("2) Find the value of a number cubed ");
             System.out.println("3) Find the value of a number, to any power");
             System.out.println("4) Exit");
         
-//        choice = keyedInput.nextInt();
-//        while (choice != 4)
+        choice = keyedInput.nextInt();
+        while (choice != 4) 
+        {
        
             switch (choice)
             {
