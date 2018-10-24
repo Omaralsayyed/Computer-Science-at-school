@@ -42,7 +42,7 @@ public class CubesSquaresAndPowers {
             switch (choice)
             {
                 case (1): 
-                    System.out.println("enter the number you would like to square:");
+                    System.out.println("Enter the number you would like to square:");
                     userNum = keyedInput.nextInt();
                      for (int i = 1; i <2 ; i = i + 1)
 
@@ -51,7 +51,7 @@ public class CubesSquaresAndPowers {
                     }System.out.println(newNum); 
                     
                 case (2): 
-                    System.out.println("enter the number you would like to cube:");
+                    System.out.println("Enter the number you would like to cube:");
                     userNum = keyedInput.nextInt();
                     newNum= userNum;
                      for (int i = 1; i <3 ; i = i + 1)
@@ -61,9 +61,9 @@ public class CubesSquaresAndPowers {
                     }System.out.println(newNum); 
                     
                  case (3): 
-                    System.out.println("enter the number you would like to be the base:");
+                    System.out.println("Enter the number you would like to be the base:");
                     userNum = keyedInput.nextInt();
-                    System.out.println("enter the the power which you would like to apply on " + userNum);
+                    System.out.println("Enter the the power which you would like to apply on " + userNum);
                     userPower= keyedInput.nextInt();
                     newNum=userNum;
                      for (int i = 1; i < userPower ; i = i + 1)
