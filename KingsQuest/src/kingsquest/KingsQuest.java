@@ -17,12 +17,13 @@ public class KingsQuest {
      */
     public static void main(String[] args) {
        Scanner keyedInput = new Scanner(System.in);
-        
+        //define variables
         String A, B, C, answer;
-        
+        //ask user if they want to play
         System.out.println("You have been selected to become the king's best knight, but first you must complete a quest. ");
         System.out.println ("Do you accept? A) yes B) no");
         answer = keyedInput.nextLine ();
+        //start game
         if (answer.equals ("A"))
         {
             System.out.println("You must first choose a horse."); 
