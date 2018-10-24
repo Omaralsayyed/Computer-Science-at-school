@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ *Omar Sayyed
+October 24 2018
+calculates squares, powers and cubes for the user
+*/
 
 package cubessquaresandpowers;
 import java.util.Scanner;
