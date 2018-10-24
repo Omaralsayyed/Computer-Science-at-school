@@ -18,27 +18,27 @@ public class CubesSquaresAndPowers {
      */
     public static void main(String[] args) {
         Scanner keyedInput = new Scanner (System.in);  
-        
+        //define Variables
         int userNum = 0;
         int userBase = 0;
         int choice = 0;
         int newNum = 0;
         int userPower= 0;
         
- 
+ //start loop
          do
          {
+             //user instructions
             System.out.println("Please choose an option:");
             System.out.println("1) Find the value of a number squared" );
             System.out.println("2) Find the value of a number cubed ");
             System.out.println("3) Find the value of a number, to any power");
             System.out.println("4) Exit");
-        
+        //get user choice
         choice = keyedInput.nextInt();
-//        newNum= keyedInput.nextInt();
-//        } while (choice != 4); 
+
         {
-       
+       //different options
             switch (choice)
             {
                 case (1): 
@@ -75,7 +75,7 @@ public class CubesSquaresAndPowers {
             }
         }
 
-
+//end of the loop
     }  while (choice != 4); 
     
 }}
