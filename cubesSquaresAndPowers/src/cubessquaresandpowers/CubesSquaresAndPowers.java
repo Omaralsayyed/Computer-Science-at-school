@@ -23,9 +23,11 @@ public class CubesSquaresAndPowers {
         int userBase = 0;
         int choice = 0;
         int newNum = 0;
+        int userPower= 0;
         
  
-         
+         do
+         {
             System.out.println("Please choose an option:");
             System.out.println("1) Find the value of a number squared" );
             System.out.println("2) Find the value of a number cubed ");
@@ -33,7 +35,8 @@ public class CubesSquaresAndPowers {
             System.out.println("4) Exit");
         
         choice = keyedInput.nextInt();
-        while (choice != 4) 
+//        newNum= keyedInput.nextInt();
+//        } while (choice != 4); 
         {
        
             switch (choice)
@@ -43,15 +46,36 @@ public class CubesSquaresAndPowers {
                     userNum = keyedInput.nextInt();
                      for (int i = 1; i <2 ; i = i + 1)
 
-            {
-               newNum = userNum*userNum;
-            }
-                    System.out.println(newNum);         
+                    {
+                       newNum = userNum*userNum;
+                    }System.out.println(newNum); 
+                    
+                case (2): 
+                    System.out.println("enter the number you would like to cube:");
+                    userNum = keyedInput.nextInt();
+                    newNum= userNum;
+                     for (int i = 1; i <3 ; i = i + 1)
+
+                    {
+                       newNum = newNum*userNum;
+                    }System.out.println(newNum); 
+                    
+                 case (3): 
+                    System.out.println("enter the number you would like to be the base:");
+                    userNum = keyedInput.nextInt();
+                    System.out.println("enter the the power which you would like to apply on " + userNum);
+                    userPower= keyedInput.nextInt();
+                    newNum=userNum;
+                     for (int i = 1; i < userPower ; i = i + 1)
+
+                    {
+                       newNum = newNum*userNum;
+                    }System.out.println(newNum); 
 
             }
         }
 
 
-    }
+    }  while (choice != 4); 
     
-}
+}}
