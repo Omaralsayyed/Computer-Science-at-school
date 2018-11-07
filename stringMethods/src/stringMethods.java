@@ -354,7 +354,7 @@ public class stringMethods extends javax.swing.JFrame {
    
       
 
-        wordCaps = (word.caps());
+        wordCaps = (word.toUpperCase());
       LengthBtn.setText(" The word in all caps is:  " + wordCaps +".");
     }//GEN-LAST:event_capsBtnActionPerformed
 
@@ -369,7 +369,7 @@ public class stringMethods extends javax.swing.JFrame {
    
       
 
-        fourthLetter = (word1.charAt(3));
+        fourthLetter = (""+word1.charAt(3));
       fourthSpotBtn.setText(" The fourth letter is:  " + fourthLetter +".");
     }//GEN-LAST:event_fourthSpotBtnActionPerformed
 
@@ -378,7 +378,13 @@ public class stringMethods extends javax.swing.JFrame {
     }//GEN-LAST:event_identicalInput1ActionPerformed
 
     private void identicalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identicalBtnActionPerformed
-        // TODO add your handling code here:
+          String word1, word2, identical;
+      
+      word1  =identicalInput1.getText();
+      word2  =identicalInput2.getText();
+   
+        identical = (""+ word1.equals (word2));
+      identicalBtn.setText("" + identical +".");
     }//GEN-LAST:event_identicalBtnActionPerformed
 
     private void identicalInput2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identicalInput2ActionPerformed
@@ -394,7 +400,7 @@ public class stringMethods extends javax.swing.JFrame {
     }//GEN-LAST:event_letterInput2ActionPerformed
 
     private void letterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letterBtnActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_letterBtnActionPerformed
 
     private void charactersInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charactersInputActionPerformed
