@@ -23,7 +23,8 @@ public class MyFirstSubroutine {
         System.out.println("If you would like to find the area of a rectangle enter 1."
                + "\nIf you would like to find the area of a triangle enter 2."
                 + "\nIf you would like to find the perimeter of a rectangle enter 3. "
-                + "\nIf you would like to find the perimeter of a square enter 4." );
+                + "\nIf you would like to find the perimeter of a square enter 4."
+                + "\nIf you would like to find the area of a square enter 5" );
         int choice = keyedInput.nextInt();
         
         if (choice==1){
@@ -34,7 +35,8 @@ public class MyFirstSubroutine {
             perimeterOfRect();
         } else if (choice==4){
             perimeterOfSquare();
-        }
+        }else if (choice==5){
+            areaOfSquare(); }
     }
      public static void areaOfRect ()
              
@@ -84,5 +86,14 @@ public class MyFirstSubroutine {
        
         int product = length*4; 
         System.out.println("The perimeter of the square is: "+ product +".");}
+    
+    public static void areaOfSquare ()
+             
+    {  Scanner keyedInput = new Scanner (System.in);
+
+        System.out.println("Enter one side meausurement:");
+        int length = keyedInput.nextInt();
+        int product = length*length; 
+        System.out.println("The area of the square is: "+ product +".");}
 }
 
