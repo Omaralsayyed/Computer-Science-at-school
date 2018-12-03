@@ -22,6 +22,9 @@ public class DataValidation {
         sixChar ();
         lowerA ();
         notZ ();
+        btwn ();
+        negInt ();
+        posOdd ();
     }
         
         public static void sixChar (){
@@ -94,5 +97,71 @@ public class DataValidation {
             
         } 
        }
+        
+        public static void btwn (){
+        String myInput;
+        String btwn;
+        int length =0;  
+        
+        try {
+            //user input
+            btwn = JOptionPane.showInputDialog("Enter a string between 5 and 500 characters.");
+         
+            //will crash if sixPlus is less than 6 
+           length= (btwn.length());
+            System.out.println("" + length);
+            
+            if (length <5) {
+                throw new Exception("This word is too short.");
+            }else if (length >500) {
+                throw new Exception("This word is too short.");
+            }
+        } catch (Exception  e) {
+            System.err.println(e.getMessage());
+            
+        } 
+        }
+        
+        public static void negInt (){
+        int myInput;
+        
+        String negString;  
+        
+        try {
+            //user input
+            negString = JOptionPane.showInputDialog("Enter a negative number.");
+         
+          int negInt = Integer.parseInt(negString);
+            
+            if (negInt >0) {
+                throw new Exception("This is not a negative number.");
+            }
+        } catch (Exception  e) {
+            System.err.println(e.getMessage());
+            
+        } 
+        
+        }
+        
+        public static void posOdd (){
+        int myInput;
+        
+        String posOdd;  
+        
+        try {
+            //user input
+            posOdd = JOptionPane.showInputDialog("Enter a negative number.");
+         
+          int posInt = Integer.parseInt(posOdd);
+            
+            if (posInt >0) {
+                throw new Exception("This is not a negative number.");
+            }
+        } catch (Exception  e) {
+            System.err.println(e.getMessage());
+            
+        } 
+        
+        }
 }
 
