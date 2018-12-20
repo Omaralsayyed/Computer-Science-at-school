@@ -2,6 +2,7 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -177,7 +178,7 @@ public class votingData extends javax.swing.JFrame {
         try {
 			out = new FileWriter(dataFile,true);
 			writeFile = new BufferedWriter(out);
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < 1; i++) {
 				name = firstNameInput.getText();
 				party = partyInput.getText();
 				writeFile.write(name);
@@ -199,9 +200,27 @@ public class votingData extends javax.swing.JFrame {
        File dataFile = new File("names.dat.txt");
 		FileReader in;
 		BufferedReader readFile;
-		String name;
-                String party;
-                name  = readFile.readLine();
+		String party;
+		int totalNames = 0;
+		int numScores=0;
+		try {
+			in = new FileReader(dataFile);
+			readFile = new BufferedReader(in);
+    		while ((party = readFile.readLine()) != null ) {
+                        
+                    textOut.append( party +"\n");
+                }
+                
+			readFile.close();
+			in.close();
+                
+		} catch (FileNotFoundException e) {
+			System.out.println("File does not exist or could not be found.");
+			System.err.println("FileNotFoundException: " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Problem reading file.");
+                        System.err.println("IOException: " + e.getMessage());
+    	}
                 
                 
     }//GEN-LAST:event_resultsBtnActionPerformed
