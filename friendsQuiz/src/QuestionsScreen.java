@@ -26,31 +26,330 @@ public class QuestionsScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        questionLbl0 = new javax.swing.JLabel();
+        ansALbl0 = new javax.swing.JLabel();
+        ansBLbl0 = new javax.swing.JLabel();
+        ansCLbl0 = new javax.swing.JLabel();
+        ansDLbl0 = new javax.swing.JLabel();
+        answerPromptLbl0 = new javax.swing.JLabel();
+        userAnswer0 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        numCorrectLbl = new javax.swing.JLabel();
+        numIncorrectLbl = new javax.swing.JLabel();
+        perCorrectLbl = new javax.swing.JLabel();
+        youAreUserLbl = new javax.swing.JLabel();
+        numCorrectNum = new javax.swing.JLabel();
+        numIncorrectNum = new javax.swing.JLabel();
+        perCorrectNum = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        questionLbl0.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        questionLbl0.setForeground(new java.awt.Color(204, 0, 0));
+        questionLbl0.setText("Where was Basketball Created?");
+
+        ansALbl0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ansALbl0.setForeground(new java.awt.Color(204, 0, 0));
+        ansALbl0.setText("A) America");
+
+        ansBLbl0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ansBLbl0.setForeground(new java.awt.Color(204, 0, 0));
+        ansBLbl0.setText("B) England");
+
+        ansCLbl0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ansCLbl0.setForeground(new java.awt.Color(204, 0, 0));
+        ansCLbl0.setText("C) Canada");
+
+        ansDLbl0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ansDLbl0.setForeground(new java.awt.Color(204, 0, 0));
+        ansDLbl0.setText("D) Africa");
+
+        answerPromptLbl0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        answerPromptLbl0.setForeground(new java.awt.Color(204, 0, 0));
+        answerPromptLbl0.setText("Enter Your answer here:");
+
+        userAnswer0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userAnswer0ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(204, 0, 0));
+        jButton1.setText("Submit Answer");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        numCorrectLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numCorrectLbl.setForeground(new java.awt.Color(204, 0, 0));
+        numCorrectLbl.setText("Number Correct:");
+
+        numIncorrectLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numIncorrectLbl.setForeground(new java.awt.Color(204, 0, 0));
+        numIncorrectLbl.setText("Number Incorrect:");
+
+        perCorrectLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        perCorrectLbl.setForeground(new java.awt.Color(204, 0, 0));
+        perCorrectLbl.setText("Percentage Correct:");
+
+        youAreUserLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        youAreUserLbl.setForeground(new java.awt.Color(204, 0, 0));
+        youAreUserLbl.setText("You are user #");
+
+        numCorrectNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numCorrectNum.setForeground(new java.awt.Color(204, 0, 0));
+        numCorrectNum.setText("0");
+
+        numIncorrectNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numIncorrectNum.setForeground(new java.awt.Color(204, 0, 0));
+        numIncorrectNum.setText("0");
+
+        perCorrectNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        perCorrectNum.setForeground(new java.awt.Color(204, 0, 0));
+        perCorrectNum.setText("0");
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 0, 0));
+        jButton2.setText("Next Question");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(questionLbl0))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(ansALbl0)
+                                .addGap(18, 18, 18)
+                                .addComponent(ansBLbl0)
+                                .addGap(18, 18, 18)
+                                .addComponent(ansCLbl0)
+                                .addGap(18, 18, 18)
+                                .addComponent(ansDLbl0))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(answerPromptLbl0)
+                                .addGap(18, 18, 18)
+                                .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 2, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(numCorrectLbl)
+                            .addComponent(numIncorrectLbl)
+                            .addComponent(perCorrectLbl)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(youAreUserLbl)
+                                .addGap(12, 12, 12)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numCorrectNum)
+                            .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(perCorrectNum))))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1)
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addGap(6, 6, 6)
+                .addComponent(questionLbl0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ansALbl0)
+                    .addComponent(ansBLbl0)
+                    .addComponent(ansCLbl0)
+                    .addComponent(ansDLbl0))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(answerPromptLbl0)
+                    .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(numCorrectLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numIncorrectLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(perCorrectLbl))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(numCorrectNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numIncorrectNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(perCorrectNum)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(youAreUserLbl)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void userAnswer0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer0ActionPerformed
+
+    }//GEN-LAST:event_userAnswer0ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //declare variables
+        String answer0, answer1, answer2, answer3, answer4, correctPercentage;
+        double correctScore = 0;
+        double perCorrect, userNum;
+        double incorrectScore = 0;
+        
+
+        //get user's answers
+        answer0 =userAnswer0.getText();
+        
+
+        //Check answers
+        //question1
+        if (answer0.equals ("C"))
+        {
+            answerPromptLbl0.setText ("Correct");
+            correctScore ++;
+        }
+        else if (answer0.equals ("c"))
+        {
+            answerPromptLbl0.setText ("Correct");
+            correctScore ++;
+        }
+        else
+        {
+            answerPromptLbl0.setText ("Incorrect");
+            incorrectScore ++;
+        }
+
+//        //question2
+//        if (answer1.equals ("A"))
+//        {
+//            answerPromptLbl1.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else if (answer1.equals ("a"))
+//        {
+//            answerPromptLbl1.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else
+//        {
+//            answerPromptLbl1.setText ("Incorrect");
+//            incorrectScore ++;
+//        }
+//
+//        //question 3
+//        if (answer2.equals ("B"))
+//        {
+//            answerPromptLbl2.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else if (answer2.equals ("b"))
+//        {
+//            answerPromptLbl2.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else
+//        {
+//            answerPromptLbl2.setText ("Incorrect");
+//            incorrectScore ++;
+//        }
+//
+//        //question 4
+//        if (answer3.equals ("D"))
+//        {
+//            answerPromptLbl3.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else if (answer3.equals ("d"))
+//        {
+//            answerPromptLbl3.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else
+//        {
+//            answerPromptLbl3.setText ("Incorrect");
+//            incorrectScore ++;
+//        }
+//
+//        //question 5
+//        if (answer4.equals ("B"))
+//        {
+//            answerPromptLbl4.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else if (answer4.equals ("b"))
+//        {
+//            answerPromptLbl4.setText ("Correct");
+//            correctScore ++;
+//        }
+//        else
+//        {
+//            answerPromptLbl4.setText ("Inorrect");
+//            incorrectScore ++;
+//        }
+
+        //generate random number
+        userNum= (int)Math.round(Math.random()*100+1);
+        userNumLbl.setText(String.valueOf(userNum));
+
+        //calculate and display scores
+        numCorrectNum.setText (""+correctScore);
+        numIncorrectNum.setText (""+incorrectScore);
+        perCorrect = ((correctScore /5)*100 );
+        perCorrectNum.setText ("%" + perCorrect);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int questionNum = 0;
+        questionNum ++ ;
+        
+        if (questionNum = 1){
+            questionLbl0.setText("How many catigories of towels does Monica Have?");
+            ansALbl0.setText("9");
+            ansBLbl0.setText("7");
+            ansCLbl0.setText("11");
+            ansDLbl0.setText("16");
+        } else if (questionNum = 2){
+            questionLbl0.setText("What is Chandler's Job?");
+            ansALbl0.setText("Accountant");
+            ansBLbl0.setText("Transponster");
+            ansCLbl0.setText("IT procurements manager");
+            ansDLbl0.setText("IT Information Editor");
+        }else if (questionNum = 3){
+            questionLbl0.setText("How many times does Ross get married?");
+            ansALbl0.setText("3");
+            ansBLbl0.setText("2");
+            ansCLbl0.setText("1");
+            ansDLbl0.setText("4");
+        }
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +387,21 @@ public class QuestionsScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel ansALbl0;
+    private javax.swing.JLabel ansBLbl0;
+    private javax.swing.JLabel ansCLbl0;
+    private javax.swing.JLabel ansDLbl0;
+    private javax.swing.JLabel answerPromptLbl0;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel numCorrectLbl;
+    private javax.swing.JLabel numCorrectNum;
+    private javax.swing.JLabel numIncorrectLbl;
+    private javax.swing.JLabel numIncorrectNum;
+    private javax.swing.JLabel perCorrectLbl;
+    private javax.swing.JLabel perCorrectNum;
+    private javax.swing.JLabel questionLbl0;
+    private javax.swing.JTextField userAnswer0;
+    private javax.swing.JLabel youAreUserLbl;
     // End of variables declaration//GEN-END:variables
 }
