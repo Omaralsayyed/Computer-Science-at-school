@@ -145,6 +145,27 @@ double correctScore = 0;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(numIncorrectLbl)
+                    .addComponent(perCorrectLbl)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(youAreUserLbl)
+                        .addGap(12, 12, 12))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(numCorrectLbl)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numCorrectNum)
+                    .addComponent(perCorrectNum)
+                    .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(jLabel2)
+                .addGap(51, 51, 51))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
@@ -164,30 +185,8 @@ double correctScore = 0;
                         .addContainerGap()
                         .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
-                        .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(327, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(numIncorrectLbl)
-                            .addComponent(perCorrectLbl)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(youAreUserLbl)
-                                .addGap(12, 12, 12))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(numCorrectLbl)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numCorrectNum)
-                            .addComponent(perCorrectNum)
-                            .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(questionLbl0)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -211,26 +210,30 @@ double correctScore = 0;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(numCorrectNum)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(numIncorrectNum)
-                        .addGap(1, 1, 1)
-                        .addComponent(perCorrectNum))
+                        .addGap(131, 131, 131)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(numCorrectLbl)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(numIncorrectLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(perCorrectLbl)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(youAreUserLbl)
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(numCorrectNum)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(numIncorrectNum)
+                                        .addGap(1, 1, 1)
+                                        .addComponent(perCorrectNum))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(numCorrectLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(numIncorrectLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(perCorrectLbl)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(youAreUserLbl)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -243,9 +246,11 @@ double correctScore = 0;
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         //declare variables
-        String answer0, answer1, answer2, answer3, answer4, correctPercentage;
+        String answer0, correctPercentage;
      
         double perCorrect, userNum;
+        
+        submitBtn.setVisible(false);
         
         
 
@@ -297,76 +302,121 @@ double correctScore = 0;
                 answerPromptLbl0.setText ("Incorrect");
                 incorrectScore ++;
                 break;}
-        }
-                
+        }else if(questionNum == 3){
+        switch (answer0) {
+            case "A":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "a":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        }else if(questionNum == 4){
+        switch (answer0) {
+            case "B":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "b":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        }else if(questionNum == 5){
+        switch (answer0) {
+            case "C":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "c":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        }else if(questionNum == 6){
+        switch (answer0) {
+            case "D":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "d":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        } else if(questionNum == 7){
+        switch (answer0) {
+            case "A":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "a":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        } else if(questionNum == 8){
+        switch (answer0) {
+            case "c":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "C":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        } else if(questionNum == 9){
+        nextQBtn.setText("End Game");
+        
+        switch (answer0) {
+            case "A":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            case "a":
+                answerPromptLbl0.setText ("Correct");
+                correctScore ++;
+                break;
+            default:
+                answerPromptLbl0.setText ("Incorrect");
+                incorrectScore ++;
+                break;}
+        
+       
+        }else if(questionNum == 10){
+            //generate random number
+            userNum= (int)Math.round(Math.random()*100+1);
+            youAreUserLbl.setText("Your user Number is: " + String.valueOf(userNum));
 
-//        //question2
-//        if (answer1.equals ("A"))
-//        {
-//            answerPromptLbl1.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else if (answer1.equals ("a"))
-//        {
-//            answerPromptLbl1.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else
-//        {
-//            answerPromptLbl1.setText ("Incorrect");
-//            incorrectScore ++;
-//        }
-//
-//        //question 3
-//        if (answer2.equals ("B"))
-//        {
-//            answerPromptLbl2.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else if (answer2.equals ("b"))
-//        {
-//            answerPromptLbl2.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else
-//        {
-//            answerPromptLbl2.setText ("Incorrect");
-//            incorrectScore ++;
-//        }
-//
-//        //question 4
-//        if (answer3.equals ("D"))
-//        {
-//            answerPromptLbl3.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else if (answer3.equals ("d"))
-//        {
-//            answerPromptLbl3.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else
-//        {
-//            answerPromptLbl3.setText ("Incorrect");
-//            incorrectScore ++;
-//        }
-//
-//        //question 5
-//        if (answer4.equals ("B"))
-//        {
-//            answerPromptLbl4.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else if (answer4.equals ("b"))
-//        {
-//            answerPromptLbl4.setText ("Correct");
-//            correctScore ++;
-//        }
-//        else
-//        {
-//            answerPromptLbl4.setText ("Inorrect");
-//            incorrectScore ++;
-//        }
+            //calculate and display scores
+            numCorrectNum.setText (""+correctScore);
+            numIncorrectNum.setText (""+incorrectScore);
+            perCorrect = ((correctScore /10)*100 );
+            perCorrectNum.setText ("%" + perCorrect);
+            }                          
+
+
 
         //generate random number
         userNum= (int)Math.round(Math.random()*100+1);
@@ -375,12 +425,13 @@ double correctScore = 0;
         //calculate and display scores
         numCorrectNum.setText (""+correctScore);
         numIncorrectNum.setText (""+incorrectScore);
-        perCorrect = ((correctScore /5)*100 );
+        perCorrect = ((correctScore /10)*100 );
         perCorrectNum.setText ("%" + perCorrect);
 
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void nextQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextQBtnActionPerformed
+        submitBtn.setVisible(true);
         questionNum ++ ;
         
         if (questionNum == 0){
@@ -416,15 +467,33 @@ double correctScore = 0;
         }else if (questionNum == 5){
             questionLbl0.setText("Who was Rachel supposed to marry in the first episode? ");
             ansALbl0.setText("A) Paolo");
-            ansBLbl0.setText("B) Barry");
-            ansCLbl0.setText("C) Ross");
+            ansBLbl0.setText("B) Ross");
+            ansCLbl0.setText("C) Barry");
             ansDLbl0.setText("D) Joshua");
         }else if (questionNum == 6){
             questionLbl0.setText("How does Joey ask women out?");
             ansALbl0.setText("A) Asks for dinner and a movie");
-            ansBLbl0.setText("B) How you doin? ");
+            ansBLbl0.setText("B) Waaazzzzuuuupppp?");
             ansCLbl0.setText("C) What's goin on? ");
-            ansDLbl0.setText("D) Wasssssuuppppp?");
+            ansDLbl0.setText("D) How you doin?");
+        }else if (questionNum == 7){
+            questionLbl0.setText("What's Chandler's dad's Las Vegas burlesque show called?");
+            ansALbl0.setText("A) Viva Las Gaygas");
+            ansBLbl0.setText("B) La Vie En Gay");
+            ansCLbl0.setText("C) Cirque De So Gay");
+            ansDLbl0.setText("D) Some Gays Over The Rainbow");
+        }else if (questionNum == 8){
+            questionLbl0.setText("Where does Chandler tell Janice he moved to in oreder to avoid her?");
+            ansALbl0.setText("A) Kuwait");
+            ansBLbl0.setText("B) Sudan");
+            ansCLbl0.setText("C) Yeman");
+            ansDLbl0.setText("D) Oman");
+        }else if (questionNum == 9){
+            questionLbl0.setText("Where did Monica & Chandler first hook up?");
+            ansALbl0.setText("A) London");
+            ansBLbl0.setText("B) Birmingham");
+            ansCLbl0.setText("C) Paris");
+            ansDLbl0.setText("D) L.A.");
         }
         
         
