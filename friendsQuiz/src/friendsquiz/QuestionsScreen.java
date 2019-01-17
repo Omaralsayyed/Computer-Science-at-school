@@ -416,18 +416,7 @@ double correctScore = 0;
             perCorrectNum.setText ("%" + perCorrect);
             }                          
 
-
-
-        //generate random number
-        userNum= (int)Math.round(Math.random()*100+1);
-        youAreUserLbl.setText(String.valueOf(userNum));
-
-        //calculate and display scores
-        numCorrectNum.setText (""+correctScore);
-        numIncorrectNum.setText (""+incorrectScore);
-        perCorrect = ((correctScore /10)*100 );
-        perCorrectNum.setText ("%" + perCorrect);
-
+               
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void nextQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextQBtnActionPerformed
