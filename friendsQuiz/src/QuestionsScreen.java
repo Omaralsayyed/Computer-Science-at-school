@@ -154,17 +154,18 @@ double correctScore = 0;
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(youAreUserLbl)
                         .addGap(12, 12, 12))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(numCorrectLbl)))
+                    .addComponent(numCorrectLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numCorrectNum)
-                    .addComponent(perCorrectNum)
-                    .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(27, 27, 27)
+                    .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numCorrectNum)
+                            .addComponent(perCorrectNum))
+                        .addGap(44, 44, 44)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(51, 51, 51))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -189,7 +190,7 @@ double correctScore = 0;
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(questionLbl0)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(506, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,48 +449,56 @@ double correctScore = 0;
             ansBLbl0.setText("B) IT Procurements Manager");
             ansCLbl0.setText("C) Transponster");
             ansDLbl0.setText("D) IT Information Editor");
+            userAnswer0.setText(null);
         }else if (questionNum == 3){
             questionLbl0.setText("How many times does Ross get married?");
             ansALbl0.setText("A) 3");
             ansBLbl0.setText("B) 2");
             ansCLbl0.setText("C) 1");
             ansDLbl0.setText("D) 4");
+            userAnswer0.setText(null);
         }else if (questionNum == 4){
             questionLbl0.setText("What was Ross's Monkey's name?");
             ansALbl0.setText("A) Marty");
             ansBLbl0.setText("B) Marcel");
             ansCLbl0.setText("C) Muriel");
             ansDLbl0.setText("D) Monty");
+            userAnswer0.setText(null);
         }else if (questionNum == 5){
             questionLbl0.setText("Who was Rachel supposed to marry in the first episode? ");
             ansALbl0.setText("A) Paolo");
             ansBLbl0.setText("B) Ross");
             ansCLbl0.setText("C) Barry");
             ansDLbl0.setText("D) Joshua");
+            userAnswer0.setText(null);
         }else if (questionNum == 6){
             questionLbl0.setText("How does Joey ask women out?");
             ansALbl0.setText("A) Asks for dinner and a movie");
             ansBLbl0.setText("B) Waaazzzzuuuupppp?");
             ansCLbl0.setText("C) What's goin on? ");
             ansDLbl0.setText("D) How you doin?");
+            userAnswer0.setText(null);
         }else if (questionNum == 7){
             questionLbl0.setText("What's Chandler's dad's Las Vegas burlesque show called?");
             ansALbl0.setText("A) Viva Las Gaygas");
             ansBLbl0.setText("B) La Vie En Gay");
             ansCLbl0.setText("C) Cirque De So Gay");
             ansDLbl0.setText("D) Some Gays Over The Rainbow");
+            userAnswer0.setText(null);
         }else if (questionNum == 8){
             questionLbl0.setText("Where does Chandler tell Janice he moved to in oreder to avoid her?");
             ansALbl0.setText("A) Kuwait");
             ansBLbl0.setText("B) Sudan");
             ansCLbl0.setText("C) Yeman");
             ansDLbl0.setText("D) Oman");
+            userAnswer0.setText(null);
         }else if (questionNum == 9){
             questionLbl0.setText("Where did Monica & Chandler first hook up?");
             ansALbl0.setText("A) London");
             ansBLbl0.setText("B) Birmingham");
             ansCLbl0.setText("C) Paris");
             ansDLbl0.setText("D) L.A.");
+            userAnswer0.setText(null);
         }else if (questionNum == 10){
             questionLbl0.setText("Thanks For Playing");
             ansALbl0.setText("");
