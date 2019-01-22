@@ -1,3 +1,10 @@
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -41,7 +48,7 @@ double correctScore = 0;
         numCorrectLbl = new javax.swing.JLabel();
         numIncorrectLbl = new javax.swing.JLabel();
         perCorrectLbl = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        picture = new javax.swing.JLabel();
         youAreUserLbl = new javax.swing.JLabel();
         numCorrectNum = new javax.swing.JLabel();
         numIncorrectNum = new javax.swing.JLabel();
@@ -102,7 +109,7 @@ double correctScore = 0;
         perCorrectLbl.setForeground(new java.awt.Color(204, 0, 0));
         perCorrectLbl.setText("Percentage Correct:");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("JFRCVIFS.Student.UGDSB.ED\\Home\\Students\\omsay9559\\Documents\\NetBeansProjects\\friendsQuiz\\large.png")); // NOI18N
+        picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/friendsLogo.png"))); // NOI18N
 
         youAreUserLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         youAreUserLbl.setForeground(new java.awt.Color(204, 0, 0));
@@ -145,29 +152,25 @@ double correctScore = 0;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(numIncorrectLbl)
-                    .addComponent(perCorrectLbl)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(youAreUserLbl)
-                        .addGap(12, 12, 12))
-                    .addComponent(numCorrectLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numIncorrectNum, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(numIncorrectLbl)
+                            .addComponent(perCorrectLbl)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(youAreUserLbl)
+                                .addGap(12, 12, 12))
+                            .addComponent(numCorrectLbl))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numCorrectNum)
-                            .addComponent(perCorrectNum))
-                        .addGap(44, 44, 44)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(perCorrectNum)
+                            .addComponent(numIncorrectNum, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(picture))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(ansALbl0)
@@ -190,7 +193,7 @@ double correctScore = 0;
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(questionLbl0)))
-                .addContainerGap(506, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,24 +220,24 @@ double correctScore = 0;
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(numCorrectNum)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(numIncorrectNum)
-                                        .addGap(1, 1, 1)
-                                        .addComponent(perCorrectNum))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(numCorrectLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(numIncorrectLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(perCorrectLbl)))
+                                .addComponent(numCorrectLbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(youAreUserLbl)))))
+                                .addComponent(numIncorrectLbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(perCorrectLbl))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(numCorrectNum)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(numIncorrectNum)
+                                .addGap(1, 1, 1)
+                                .addComponent(perCorrectNum)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(youAreUserLbl))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -406,7 +409,34 @@ double correctScore = 0;
         
        
         }else if(questionNum == 10){
+            File dataFile = new File("Scores.txt");
+        FileWriter out;
+	BufferedWriter writeFile;
+	Scanner input = new Scanner(System.in);
+	int score;
+	String name;
+        
+        
+        try {
+			out = new FileWriter(dataFile,true);
+			writeFile = new BufferedWriter(out);
+			for (int i = 0; i < 1; i++) {
+				name = answer0;
+				score = (int) correctScore;
+				writeFile.write(name);
+				writeFile.newLine();
+				writeFile.write(score);
+				writeFile.newLine();
+			}  	
+    		writeFile.close();
+    		out.close();
+    		System.out.println("Data written to file.");
+    	} catch (IOException e) {
+			System.out.println("Problem writing to file.");
+    		System.err.println("IOException: " + e.getMessage());
+    	}
             //generate random number
+            
             userNum= (int)Math.round(Math.random()*100+1);
             youAreUserLbl.setText("Your user Number is: " + String.valueOf(userNum));
             perCorrect = ((correctScore /10)*100 );
@@ -505,7 +535,8 @@ double correctScore = 0;
             ansBLbl0.setText("");
             ansCLbl0.setText("");
             ansDLbl0.setText("");
-            submitBtn.setVisible(false);
+            answerPromptLbl0.setText("Enter Your name for the leaderboard:");
+          
         }
         
 
@@ -540,8 +571,10 @@ double correctScore = 0;
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run(){
             new QuestionsScreen().setVisible(true);
+            }
         });
     }
 
@@ -551,7 +584,6 @@ double correctScore = 0;
     private javax.swing.JLabel ansCLbl0;
     private javax.swing.JLabel ansDLbl0;
     private javax.swing.JLabel answerPromptLbl0;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nextQBtn;
     private javax.swing.JLabel numCorrectLbl;
@@ -560,6 +592,7 @@ double correctScore = 0;
     private javax.swing.JLabel numIncorrectNum;
     private javax.swing.JLabel perCorrectLbl;
     private javax.swing.JLabel perCorrectNum;
+    private javax.swing.JLabel picture;
     private javax.swing.JLabel questionLbl0;
     private javax.swing.JButton submitBtn;
     private javax.swing.JTextField userAnswer0;
