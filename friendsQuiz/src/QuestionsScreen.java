@@ -1,15 +1,21 @@
+/*
+ * Omar Sayyed
+ * Jan 25th 2019 
+ * Friends multiple choice trivia quiz for Cumalitive Project
+ * This is frame 2/2 which contains the questions, and the leaderboard, along with alll of the supporting scorekeeping
+ */
 
+
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
  *
@@ -24,7 +30,8 @@ double correctScore = 0;
      */
     public QuestionsScreen() {
         initComponents();
-        
+    textOut.setVisible(false);
+    jScrollPane1.setVisible(false);
         
     }
 
@@ -54,7 +61,8 @@ double correctScore = 0;
         numIncorrectNum = new javax.swing.JLabel();
         perCorrectNum = new javax.swing.JLabel();
         nextQBtn = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textOut = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,16 +144,9 @@ double correctScore = 0;
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        textOut.setColumns(20);
+        textOut.setRows(5);
+        jScrollPane1.setViewportView(textOut);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,8 +156,6 @@ double correctScore = 0;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(numIncorrectLbl)
                             .addComponent(perCorrectLbl)
@@ -169,7 +168,7 @@ double correctScore = 0;
                             .addComponent(numCorrectNum)
                             .addComponent(perCorrectNum)
                             .addComponent(numIncorrectNum, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(picture))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
@@ -181,64 +180,71 @@ double correctScore = 0;
                         .addGap(18, 18, 18)
                         .addComponent(ansDLbl0))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(answerPromptLbl0)
-                        .addGap(18, 18, 18)
-                        .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
-                        .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(questionLbl0))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(questionLbl0)))
-                .addContainerGap(282, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(answerPromptLbl0))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(questionLbl0)
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ansALbl0)
-                    .addComponent(ansBLbl0)
-                    .addComponent(ansCLbl0)
-                    .addComponent(ansDLbl0))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(answerPromptLbl0)
-                    .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(37, 37, 37)
+                        .addComponent(questionLbl0)
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ansALbl0)
+                            .addComponent(ansBLbl0)
+                            .addComponent(ansCLbl0)
+                            .addComponent(ansDLbl0))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(answerPromptLbl0)
+                            .addComponent(userAnswer0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nextQBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(numCorrectLbl)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(numCorrectLbl)
+                                    .addComponent(numCorrectNum))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(numIncorrectLbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(perCorrectLbl))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(numCorrectNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(numIncorrectNum)
-                                .addGap(1, 1, 1)
-                                .addComponent(perCorrectNum)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(33, 33, 33)
+                                    .addComponent(numIncorrectNum)
+                                    .addGap(1, 1, 1)
+                                    .addComponent(perCorrectNum))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(youAreUserLbl))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -250,7 +256,7 @@ double correctScore = 0;
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         //declare variables
-        String answer0, correctPercentage;
+        String answer0, correctPercentage, scoreFinal;
      
         double perCorrect, userNum;
 //        nextQBtn.setVisible(true);
@@ -262,8 +268,7 @@ double correctScore = 0;
         answer0 =userAnswer0.getText();
         
 
-        //Check answers
-        //question1
+        //Check answers for questions
         if (questionNum == 0){
         switch (answer0) {
             case "C":
@@ -407,9 +412,18 @@ double correctScore = 0;
                 incorrectScore ++;
                 break;}
         
-       
+       //save name and score to the file
         }else if(questionNum == 10){
-            File dataFile = new File("Scores.txt");
+             //generate random number and calculate percentage
+            
+        userNum= (int)Math.round(Math.random()*100+1);
+        youAreUserLbl.setText("Your user Number is: " + String.valueOf(userNum));
+        perCorrect = ((correctScore /10)*100 );
+        perCorrectNum.setText ("%" + perCorrect);
+        //change buttons
+        submitBtn.setText("Enter Leaderboard");
+        scoreFinal= (""+correctScore);   
+        File dataFile = new File("Scores.txt");
         FileWriter out;
 	BufferedWriter writeFile;
 	Scanner input = new Scanner(System.in);
@@ -422,10 +436,9 @@ double correctScore = 0;
 			writeFile = new BufferedWriter(out);
 			for (int i = 0; i < 1; i++) {
 				name = answer0;
-				score = (int) correctScore;
 				writeFile.write(name);
 				writeFile.newLine();
-				writeFile.write(score);
+				writeFile.write(scoreFinal);
 				writeFile.newLine();
 			}  	
     		writeFile.close();
@@ -434,19 +447,46 @@ double correctScore = 0;
     	} catch (IOException e) {
 			System.out.println("Problem writing to file.");
     		System.err.println("IOException: " + e.getMessage());
-    	}
-            //generate random number
-            
-            userNum= (int)Math.round(Math.random()*100+1);
-            youAreUserLbl.setText("Your user Number is: " + String.valueOf(userNum));
-            perCorrect = ((correctScore /10)*100 );
-            perCorrectNum.setText ("%" + perCorrect);
+    	} 
+            //display leaderboard from file
+        }else if (questionNum==11){
+            submitBtn.setText("Exit");
+            nextQBtn.setText("Exit");
+            jScrollPane1.setVisible(true);
+            textOut.setVisible(true);
+                File dataFile = new File("scores.txt");
+		FileReader in;
+		BufferedReader readFile;
+		String name;
+		String score;
+		try {
+			in = new FileReader(dataFile);
+			readFile = new BufferedReader(in);
+    		while ((name = readFile.readLine()) != null ) {
+                        
+                    textOut.append( name +"\n");
+                }
+                
+			readFile.close();
+			in.close();
+                
+		} catch (FileNotFoundException e) {
+			System.out.println("File does not exist or could not be found.");
+			System.err.println("FileNotFoundException: " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Problem reading file.");
+                        System.err.println("IOException: " + e.getMessage());
+    	
+                }//end the program
+               }else if (questionNum==12){
+                    System.exit(0);
+                }
+           
 
-            
-        }                     
-        //calculate and display scores
+         //hide submit button after it's pressed    
          submitBtn.setVisible(false);
-         nextQBtn.setVisible(true);
+         nextQBtn.setVisible(true);                
+        //calculate and display scores
          numCorrectNum.setText (""+correctScore);
          numIncorrectNum.setText (""+incorrectScore);
          
@@ -454,11 +494,12 @@ double correctScore = 0;
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void nextQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextQBtnActionPerformed
-       nextQBtn.setVisible(false);
+      //show submit button
+        nextQBtn.setVisible(false);
        submitBtn.setVisible(true);
-
+      //increase question by one
         questionNum ++ ;
-        
+        //set question and possible answers
         if (questionNum == 0){
             questionLbl0.setText("How many catigories of towels does Monica Have?");
             ansALbl0.setText("A) 9");
@@ -519,7 +560,7 @@ double correctScore = 0;
             questionLbl0.setText("Where does Chandler tell Janice he moved to in oreder to avoid her?");
             ansALbl0.setText("A) Kuwait");
             ansBLbl0.setText("B) Sudan");
-            ansCLbl0.setText("C) Yeman");
+            ansCLbl0.setText("C) Yemen");
             ansDLbl0.setText("D) Oman");
             userAnswer0.setText(null);
         }else if (questionNum == 9){
@@ -530,15 +571,23 @@ double correctScore = 0;
             ansDLbl0.setText("D) L.A.");
             userAnswer0.setText(null);
         }else if (questionNum == 10){
+            
+            //ask user to submit to the leaderboard
             questionLbl0.setText("Thanks For Playing");
-            ansALbl0.setText("");
-            ansBLbl0.setText("");
-            ansCLbl0.setText("");
-            ansDLbl0.setText("");
+            ansALbl0.setVisible(false);
+            ansBLbl0.setVisible(false);
+            ansCLbl0.setVisible(false);
+            ansDLbl0.setVisible(false);
             answerPromptLbl0.setText("Enter Your name for the leaderboard:");
-          
+            userAnswer0.setText(null);
+            
+          // view leaderboard
+        }else if (questionNum == 11){
+            questionLbl0.setText("Thanks For Playing");
+            answerPromptLbl0.setText("");
+            submitBtn.setText("View Leaderboard");
+            userAnswer0.setVisible(false);
         }
-        
 
         
     }//GEN-LAST:event_nextQBtnActionPerformed
@@ -584,7 +633,7 @@ double correctScore = 0;
     private javax.swing.JLabel ansCLbl0;
     private javax.swing.JLabel ansDLbl0;
     private javax.swing.JLabel answerPromptLbl0;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton nextQBtn;
     private javax.swing.JLabel numCorrectLbl;
     private javax.swing.JLabel numCorrectNum;
@@ -595,6 +644,7 @@ double correctScore = 0;
     private javax.swing.JLabel picture;
     private javax.swing.JLabel questionLbl0;
     private javax.swing.JButton submitBtn;
+    private javax.swing.JTextArea textOut;
     private javax.swing.JTextField userAnswer0;
     private javax.swing.JLabel youAreUserLbl;
     // End of variables declaration//GEN-END:variables
